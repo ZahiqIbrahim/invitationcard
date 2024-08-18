@@ -221,12 +221,13 @@
 
 
     downloadBtn.addEventListener('click', function() {
-      html2canvas(imageContainer, { useCORS: true }).then(function(canvas) {
-        const link = document.createElement('a');
-        link.download = 'custom-image.png';
-        link.href = canvas.toDataURL('image/png');
-        link.click();
-      });
+     html2canvas(imageContainer, { useCORS: true }).then(function(canvas) {
+        const dataURL = canvas.toDataURL('image/png');
+        
+        // Open the image in a new tab/window
+        const newTab = window.open();
+        newTab.document.body.innerHTML = `<img src="${dataURL}" style="width: 100%;">`;
+    });
     });
   </script>
 </body>
