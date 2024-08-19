@@ -220,15 +220,22 @@
       gents3Text.textContent = recgentsInput.value || 'no of gents';
     });
 
-
     downloadBtn.addEventListener('click', function() {
-    html2canvas(imageContainer, { useCORS: true }).then(function(canvas) {
-        const link = document.createElement('a');
-        link.download = 'custom-image.png';
-        link.href = canvas.toDataURL('image/png');
-        link.click();
-      });
-    });
+  html2canvas(imageContainer, { useCORS: true }).then(function(canvas) {
+    canvas.toBlob(function(blob) {
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'custom-image.png';
+      
+      // Append the link to the document so it can be clicked
+      document.body.appendChild(link);
+      link.click();
+      
+      // Remove the link after the download is triggered
+      document.body.removeChild(link);
+    }, 'image/png');
+  });
+});
   </script>
 </body>
 </html>
