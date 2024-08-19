@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Write on Image</title>
+  <title>invitation generator</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .image-container {
@@ -221,7 +221,7 @@
     });
 
     downloadBtn.addEventListener('click', function() {
-  html2canvas(imageContainer, { useCORS: true }).then(function(canvas) {
+       html2canvas(imageContainer, { useCORS: true }).then(function(canvas) {
     canvas.toBlob(function(blob) {
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
