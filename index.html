@@ -11,10 +11,23 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   
   <style>
+
+
+    h2{
+      font-family: 'Gill Sans','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #16423C;
+
+}
+    body{
+      background-color: #C4DAD2;
+
+
+    }
     .image-container {
       position: relative;
       display: inline-block;
-      margin-bottom: 100px;
+      margin-bottom: 50px;
+      box-shadow: 0 20px 20px rgba(0,0,0,0.2);
     }
 
     .image-container img {
@@ -124,14 +137,14 @@
 }
 
 .textbox{
-  background-color: rgb(170, 249, 223);
+  background-color: #6A9C89;
   padding-top: 2%;
   padding-bottom: 1%;
   padding-left: 5%;
   padding-right: 5%;
   border-radius: 10px;
-  border: 1px solid black;
-  margin-bottom: 5px;
+  margin-bottom: 40px;
+  box-shadow: 0 20px 20px rgba(0,0,0,0.2);
 
 }
 
@@ -143,25 +156,25 @@
   <div class="container mt-5 text-center">
    
     <div class="textbox" >
-    <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Guest's Name</h2>
+    <h2 >Guest's Name</h2>
     <input type="text" id="nameInput" class="form-control my-3" placeholder="Enter Guest's Name">
   </div>
 
   <div class="textbox" >
-    <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Mehendiraat</h2>
+    <h2>Mehendiraat</h2>
     <input type="text" id="mehendiraatladiesInput" class="form-control my-3" placeholder="No of ladies">
     <input type="text" id="mehendiraatgentsInput" class="form-control my-3" placeholder="No of gents">
     </div>
 
     <div class="textbox" >
-    <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Masnandnishini</h2>
+    <h2 >Masnandnishini</h2>
     <input type="text" id="masladiesInput" class="form-control my-3" placeholder="No of ladies">
     <input type="text" id="masgentsInput" class="form-control my-3" placeholder="No of gents">
     </div>
 
 
  <div class="textbox" >
-    <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">With Bharaat </h2>
+    <h2 >With Bharaat </h2>
     <input type="text" id="recladiesInput" class="form-control my-3" placeholder="No of ladies">
     <input type="text" id="recgentsInput" class="form-control my-3" placeholder="No of gents">
  </div>
@@ -170,7 +183,7 @@
    
 
  <div class="textbox" >
-    <button style="background-color:#30D5C8; border-color: black;" id="downloadBtn" class="btn btn-primary">Download Image</button>
+    <button style="background-color:#16423C; border-color: #16423C; box-shadow: 0 20px 20px rgba(0,0,0,0.2); color: #C4DAD2; margin-top: 25px; margin-bottom: 25px;" id="downloadBtn" class="btn btn-primary">Download Image</button>
     
     <div class="image-container mt-4" id="imageContainer">
       <!-- Image from a source that supports CORS -->
@@ -222,27 +235,27 @@
     });
 
     mehendiraatladiesInput.addEventListener('input', function () {
-      ladies1Text.textContent = mehendiraatladiesInput.value || 'no of ladies';
+      ladies1Text.textContent = mehendiraatladiesInput.value || 'X';
     });
     mehendiraatgentsInput.addEventListener('input', function () {
-      gents1Text.textContent = mehendiraatgentsInput.value || 'no of gents';
+      gents1Text.textContent = mehendiraatgentsInput.value || 'X';
     });
 
 
     masladiesInput.addEventListener('input', function () {
-      ladies2Text.textContent = masladiesInput.value || 'no of ladies';
+      ladies2Text.textContent = masladiesInput.value || 'X';
     });
     masgentsInput.addEventListener('input', function () {
-      gents2Text.textContent = masgentsInput.value || 'no of gents';
+      gents2Text.textContent = masgentsInput.value || 'X';
     });
 
 
     
     recladiesInput.addEventListener('input', function () {
-      ladies3Text.textContent = recladiesInput.value || 'no of ladies';
+      ladies3Text.textContent = recladiesInput.value || 'X';
     });
     recgentsInput.addEventListener('input', function () {
-      gents3Text.textContent = recgentsInput.value || 'no of gents';
+      gents3Text.textContent = recgentsInput.value || 'X';
     });
 
     downloadBtn.addEventListener('click', function() {
